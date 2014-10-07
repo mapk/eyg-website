@@ -3,6 +3,7 @@
 	<title>Eat Your Greens</title>
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/ui8.css">
 	<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -34,14 +35,11 @@
 <body>
 	<div class="topbar"></div>
 
-	<section am-Grid-Row="gutters between" class="container homeSlide" id="slide-1">
-		<div am-Grid-Col="6 middle" style="text-align:center;">
-			<h1 class="logo">
-				<img src="images/broc.png" /> Eat Your Greens<br />
-				<small>Stop counting calories, and start eating <span id="clr">colors</span>.</small>
-			</h1>
+	<div class="fullSlide split container" id="slide-1">
+		<div>
+			<h1 class="logo"><img src="images/broc.png" /> Eat Your Greens</h1>
+			<h3 class="tagline">Stop counting calories, and start eating <span id="clr">colors</span>.</h3>
 			<a href=""><img src="images/downloadAppStoreBtn.png" style="height:50px;" /></a>
-
 			<!-- Begin MailChimp Signup Form -->
 			<!-- <div id="mc_embed_signup">
 				<form action="//eatyourgreensapp.us9.list-manage.com/subscribe/post?u=00688758db667709ac9d8bce3&amp;id=ea1436b9b1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -56,138 +54,107 @@
 			</div> -->
 			<!--End mc_embed_signup-->
 		</div>
-		<div am-Grid-Col="6 middle">
-			<div style="text-align:left;">
-				<img src="images/hero-white.png" class="scale-with-grid" />
-				
-				<img src="images/hero-camera-blur.jpg" style="position:absolute; top:1em; left:310px; z-index:-1;" class="scale-with-grid" 
-				data-center="top:1em;"
-		        data-top-bottom="top:-20em;"
-		        data-bottom-top="top:20em;"
-		        data-anchor-target="#slide-1" />
-			</div>
+		<div>
+			<img src="images/hero-white.png" class="scale-with-grid" />
+			<img src="images/hero-camera-blur.jpg" style="position:absolute; top:0; left:300px; z-index:-1;" class="scale-with-grid" 
+			data-center="top:1em;"
+        	data-top-bottom="top:-20em;"
+        	data-bottom-top="top:20em;"
+        	data-anchor-target="#slide-1" />
 		</div>
-	</section>
+	</div>
 
 
-	<section id="slide-2">
-		<div class="container">
-			<section am-Grid-Row="gutters between">
-				<div am-Grid-Col="4">
-					<i class="icon-Fries2" style="font-size:200px; text-align:center;" 
-					data-bottom="opacity: 0;"
-                	data-center="opacity: 1"
-                	data-anchor-target="#slide-2"></i> 
-				</div>
-				<div am-Grid-Col="8 middle">
-					<h2>The Problem</h2>
-					<p>The average American's diet is predominantly beige due to poor food choices. When 
-						the health conscious individual wants to track their food intake, they are pushed 
-						toward tedious tasks of calorie counting and cumbersome data logging which becomes 
-						too burdensome to maintain.</p>
-				</div>
-			</section>
+	<section class="chunk-beige" id="slide-2">
+		<div class="container problem">
+			<aside>
+				<i class="icon-Fries2 wow flipInX" data-wow-delay=".3s" style="font-size:200px; text-align:center;"></i> 
+			</aside>
+			<article>
+				<h2>The Problem</h2>
+				<p>The average American's diet is predominantly beige due to poor food choices. When 
+					the health conscious individual wants to track their food intake, they are pushed 
+					toward tedious tasks of calorie counting and cumbersome data logging which becomes 
+					too burdensome to maintain.</p>
+			</article>
 		</div>
 	</section>
 	
 
-	<section id="slide-3">
+	<section class="chunk-green" id="slide-3">
 		<div class="broc-box">
 			<img src="images/broc.png" class="broc" />
 		</div>
-		<div class="container">
-			<section am-Grid-Row="gutters between">
-				<div am-Grid-Col="8">
-				<h2>The Solution</h2>
-				<p>Eating a variety of colors is proving to be a healthy alternative to counting 
-					calories, or logging food items in a nutrition journal. Research has shown that 
-					eating a variety of colors ensures a variety of nutrients and vitamins ultimately 
-					leading toward better health.</p>
-				<p>Eat Your Greens solves 
-					this by taking a photo of the user's meal, and prompting the user to target the 
-					different colors, then displaying it on a pie chart and storing a historic record 
-					for the user's review. When the user doesn't eat a certain color, the app will 
-					push a message promoting a specific food item that matches the color they're lacking.</p>
-				</div>
-				<div am-Grid-Col="4 middle">
-					<i class="icon-Fruits" style="font-size:200px; text-align:center;"
-					data-bottom="opacity: 0;"
-                	data-center="opacity: 1"
-                	data-anchor-target="#slide-3"></i> 
-				</div>
-			</section>
+		<div class="container solution">
+			<article>
+			<h2>The Solution</h2>
+			<p>Eating a variety of colors is proving to be a healthy alternative to counting 
+				calories, or logging food items in a nutrition journal. Research has shown that 
+				eating a variety of colors ensures a variety of nutrients and vitamins ultimately 
+				leading toward better health.</p>
+			<p>Eat Your Greens solves 
+				this by taking a photo of the user's meal, and prompting the user to target the 
+				different colors, then displaying it on a pie chart and storing a historic record 
+				for the user's review. When the user doesn't eat a certain color, the app will 
+				push a message promoting a specific food item that matches the color they're lacking.</p>
+			</article>
+			<aside>
+				<i class="icon-Fruits wow flipInX" data-wow-delay=".3s" style="font-size:200px; text-align:center;"></i> 
+			</aside>
 		</div>
 	</section>
 
 
-	<section class="homeSlide" id="slide-4">
+	<section class="" id="slide-4">
 		<div class="icon-bar">
 			<i class="icon-apple"></i><i class="icon-bowl"></i><i class="icon-Banana"></i><i class="icon-drumstick_alt"></i><i class="icon-Carrot"></i><i class="icon-Burger"></i><i class="icon-Celery"></i><i class="icon-Cheese"></i><i class="icon-Corn"></i><i class="icon-Egg"></i><i class="icon-Fruitsgeneral"></i><i class="icon-Milk"></i><i class="icon-Tomato"></i><i class="icon-Steak"></i><i class="icon-Lettuce"></i><i class="icon-Taco"></i><i class="icon-Strawberry"></i><i class="icon-Bread"></i><i class="icon-Grapes"></i>
 			<i class="icon-apple"></i><i class="icon-bowl"></i><i class="icon-Banana"></i><i class="icon-drumstick_alt"></i><i class="icon-Carrot"></i><i class="icon-Burger"></i><i class="icon-Celery"></i><i class="icon-Cheese"></i><i class="icon-Corn"></i><i class="icon-Egg"></i><i class="icon-Fruitsgeneral"></i><i class="icon-Milk"></i><i class="icon-Tomato"></i><i class="icon-Steak"></i><i class="icon-Lettuce"></i><i class="icon-Taco"></i><i class="icon-Strawberry"></i><i class="icon-Bread"></i><i class="icon-Grapes"></i>
 			<i class="icon-apple"></i><i class="icon-bowl"></i><i class="icon-Banana"></i><i class="icon-drumstick_alt"></i><i class="icon-Carrot"></i><i class="icon-Burger"></i><i class="icon-Celery"></i><i class="icon-Cheese"></i><i class="icon-Corn"></i><i class="icon-Egg"></i><i class="icon-Fruitsgeneral"></i><i class="icon-Milk"></i><i class="icon-Tomato"></i><i class="icon-Steak"></i><i class="icon-Lettuce"></i><i class="icon-Taco"></i><i class="icon-Strawberry"></i><i class="icon-Bread"></i><i class="icon-Grapes"></i>
 		</div>
-		<div class="container">
-			<section am-Grid-Row="gutters between">
-				<div am-Grid-Col="4">
-					<div class="tip-1"
-					data-bottom="opacity:0; top:15em;"
-                	data-center="opacity:1; top:4em;"
-                	data-anchor-target="#slide-4">
-						<h2>Learn about your diet</h2>
-						<p>By tracking the colors of your food, you'll see which colors you eat most, and which colors you're lacking.</p>
-						<button class="btn tip-1-btn">VIEW</button>
-					</div>
-					<div class="tip-2"
-					data-bottom="opacity:0; top:15em;"
-                	data-center="opacity:1; top:4em;"
-                	data-anchor-target="#slide-4">
-						<h2>Take pictures of your meals</h2>
-						<p>A picture says a thousand words, and... um... a variety of colors.</p>
-						<button class="btn tip-2-btn">VIEW</button>
-					</div>
-				</div>
 
-				<div am-Grid-Col="4" class="wire"><div class="tip-1-screen"></div></div>
-				
-				<div am-Grid-Col="4">
-					<div class="tip-3"
-					data-bottom="opacity:0; top:15em;"
-                	data-center="opacity:1; top:4em;"
-                	data-anchor-target="#slide-4">
-						<h2>Recieve nutritional tips</h2>
-						<p>Tips encourage you to try new colors, and new foods.</p>
-						<button class="btn tip-3-btn">VIEW</button>
-					</div>
-					<div class="tip-4"
-					data-bottom="opacity:0; top:15em;"
-                	data-center="opacity:1; top:4em;"
-                	data-anchor-target="#slide-4">
-						<h2>View colors over time</h2>
-						<p>Pinch to zoom in and out of the color wheel to see your colors over time.</p>
-						<button class="btn tip-4-btn">VIEW</button>
-					</div>
+		<div class="container overview">
+			<div>
+				<div class="tip-1 wow fadeInLeft" data-wow-delay=".1s">
+					<h2>Learn about your diet</h2>
+					<p>Learn which colors you eat most, and which colors you're lacking.</p>
+					<button class="btn tip-1-btn">VIEW</button>
 				</div>
-			</section>
+				<div class="tip-2 wow fadeInLeft" data-wow-delay=".2s">
+					<h2>Take pictures of your meals</h2>
+					<p>A picture says a thousand words, and... um... a variety of colors.</p>
+					<button class="btn tip-2-btn">VIEW</button>
+				</div>
+			</div>
+
+			<div class="wire"><div class="tip-1-screen"></div></div>
+			
+			<div>
+				<div class="tip-3 wow fadeInRight" data-wow-delay=".3s">
+					<h2>Recieve nutritional tips</h2>
+					<p>Tips encourage you to try new colors, and new foods.</p>
+					<button class="btn tip-3-btn">VIEW</button>
+				</div>
+				<div class="tip-4 wow fadeInRight" data-wow-delay=".4s">
+					<h2>View colors over time</h2>
+					<p>Pinch to zoom in and out of the color wheel to see your colors over time.</p>
+					<button class="btn tip-4-btn">VIEW</button>
+				</div>
+			</div>
 		</div>
 	</section>
 
 
-	<section am-Grid-Row="gutters between" class="homeSlide" id="slide-5">
+	<section class="fullSlide" id="slide-5">
 		<div class="bg" 
 		data-center="background-position: 50% 0px;"
         data-top-bottom="background-position: 50% -100px;"
         data-bottom-top="background-position: 50% 100px;"
         data-anchor-target="#slide-5">
-			<div class="container">
-				<div am-Grid-Col="6">
-					<h1><i class="icon-camera2" 
-						data-center="top:5px;"
-				        data-top-bottom="top:5px;"
-				        data-bottom-top="top:300px;"
-				        data-anchor-target="#slide-5"></i>The easiest way to learn the most about your diet</h1>
+			<div class="container message">
+				<div>
+					<h1><i class="icon-camera2 wow bounceInUp" data-wow-delay=".3s"></i>The easiest way to learn the most about your diet</h1>
 					<h2>Taking pictures of your food is a popular trend. Eat Your Greens allows you 
-						to quickly record the colors of those meals, which in turn, provides 
-						helpful feedback about your diet.</h2> 
+						to quickly record the colors of those meals providing helpful feedback about your diet.</h2> 
 					<h2>You're taking pictures aleady, why not learn a bit in the process?</h2>
 				</div>
 			</div>
@@ -243,20 +210,25 @@
 		<p>Foodies.</p>
 	</section> -->
 
-	<section></section>
-
 	<footer>
-		<a href="https://www.facebook.com/eatyourgreensapp" target="_blank"><i class="icon-facebook"></i></a>
-		<a href="https://twitter.com/eatyourgreensap" target="_blank"><i class="icon-twitter"></i></a>
-		 &nbsp; &copy; <span>Copyright 2014. All Rights Reserved.</span>
+		<div class="container">
+			<a href="https://www.facebook.com/eatyourgreensapp" target="_blank"><i class="icon-facebook"></i></a>
+			<a href="https://twitter.com/eatyourgreensap" target="_blank"><i class="icon-twitter"></i></a>
+			<span>Copyright 2014. All Rights Reserved. Eat Your Greens is a product of <a href="http://changeranger.co" target="_blank">Change Ranger</a>.</span>
+		</div>
 	</footer>
 	
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="js/imagesloaded.js"></script>
 <script src="js/skrollr.js"></script>
+<script src="js/wow.js"></script>
 <script src="js/_main.js"></script>
 <script src="js/accordion.js"></script>
+
+<script>
+	new WOW().init();
+</script>
 
 <script type="text/javascript">
 	var color_text= document.getElementById('clr');

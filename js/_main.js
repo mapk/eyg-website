@@ -2,7 +2,7 @@
 var s = skrollr.init();
  
 // Refresh Skrollr after resizing our sections
-s.refresh($('.homeSlide'));
+s.refresh($('.fullSlide'));
 
  /**
  * This demo was prepared for you by Petr Tichy - Ihatetomatoes.net
@@ -18,7 +18,7 @@ s.refresh($('.homeSlide'));
 	
 	// Setup variables
 	$window = $(window);
-	$slide = $('.homeSlide');
+	$slide = $('.fullSlide');
 	$body = $('body');
 	
     //FadeIn all sections   
