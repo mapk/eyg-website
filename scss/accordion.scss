@@ -1,0 +1,5 @@
+.accordion-header { cursor:pointer; }
+.inactive-header:hover { position:relative; }
+.inactive-header, .inactive-header-2 { color:rgba(71,26,12,.7); @include transition(background .2s linear, color .2s linear); }
+.inactive-header:hover, .inactive-header-2:hover { color:rgba(71,26,12,1); }
+.accordion-content { display:none; position:relative; }
