@@ -107,11 +107,11 @@ section { padding:5em 0; @include clearfix(); position:relative; }
 	.broc { width:40px; height:40px; background:#FFF; border-radius:50%; padding:5px; }
 }
 .wire { width:222px; height:434px; margin:0 auto; background:url(../images/iphone-wire.png) no-repeat center top; position:relative; 
-	.tip-1-screen { background:url(../images/tip-1-screen.gif) no-repeat; }
-	.tip-2-screen { background:url(../images/tip-2-screen.gif) no-repeat; }
-	.tip-3-screen { background:url(../images/tip-3-screen.gif) no-repeat; }
-	.tip-4-screen { background:url(../images/tip-4-screen.gif) no-repeat; }
-	[class^='tip'] { margin:56px auto 0; width:180px; height:322px; background-size:100%; }
+	.tip-1-screen { background:url(../images/tip1.png) no-repeat; }
+	.tip-2-screen { background:url(../images/tip2.gif) no-repeat; }
+	.tip-3-screen { background:url(../images/tip3.png) no-repeat; }
+	.tip-4-screen { background:url(../images/tip4.gif) no-repeat; }
+	[class^='tip'] { margin:56px auto 0; width:180px; height:325px; background-size:100%; }
 }
 [class^='tip'] { margin-bottom:2em; position:relative; top:0; text-align:center; }
 

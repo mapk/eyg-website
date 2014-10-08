@@ -453,17 +453,17 @@ section {
   background: url(../images/iphone-wire.png) no-repeat center top;
   position: relative; }
   .wire .tip-1-screen {
-    background: url(../images/tip-1-screen.gif) no-repeat; }
+    background: url(../images/tip1.png) no-repeat; }
   .wire .tip-2-screen {
-    background: url(../images/tip-2-screen.gif) no-repeat; }
+    background: url(../images/tip2.gif) no-repeat; }
   .wire .tip-3-screen {
-    background: url(../images/tip-3-screen.gif) no-repeat; }
+    background: url(../images/tip3.png) no-repeat; }
   .wire .tip-4-screen {
-    background: url(../images/tip-4-screen.gif) no-repeat; }
+    background: url(../images/tip4.gif) no-repeat; }
   .wire [class^='tip'] {
     margin: 56px auto 0;
     width: 180px;
-    height: 322px;
+    height: 325px;
     background-size: 100%; }
 
 [class^='tip'] {
