@@ -127,7 +127,7 @@ section { padding:5em 0; @include clearfix(); position:relative; }
 	
 		h1, h2, p { background:rgba(255,255,255,.75); color:$greyDarker; padding:15px; display:inline-table; position:relative; }
 		h1 { color:$green; line-height:1; 
-			.icon-camera2 { position:absolute; left:-60px; top:5px; }
+			.icon-camera2 { position:absolute; left:-60px; top:5px; color:$white; }
 		}
 	}
 }

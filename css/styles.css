@@ -496,7 +496,8 @@ section {
       #slide-5 .bg h1 .icon-camera2 {
         position: absolute;
         left: -60px;
-        top: 5px; }
+        top: 5px;
+        color: #FFFFFF; }
 
 #mc_embed_signup {
   max-width: 460px;
