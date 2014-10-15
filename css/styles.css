@@ -248,7 +248,8 @@ h1.logo {
   color: #1db345;
   font-weight: 300;
   margin: 0;
-  padding: 0 0 10px; }
+  padding: 0 0 10px;
+  white-space: nowrap; }
   h1.logo img {
     vertical-align: middle;
     width: 48px;
@@ -322,6 +323,9 @@ section {
     float: left;
     margin-right: 1.2567324955%;
     text-align: center; }
+    .problem aside i {
+      font-size: 200px;
+      text-align: center; }
   .problem article {
     width: 66.2477558348%;
     float: right;
@@ -340,6 +344,9 @@ section {
     float: right;
     margin-right: 0;
     text-align: center; }
+    .solution aside i {
+      font-size: 200px;
+      text-align: center; }
   .solution article {
     width: 66.2477558348%;
     float: left;
@@ -374,6 +381,12 @@ section {
   float: left;
   padding-left: 0.35em;
   padding-right: 0.35em; }
+
+.arrow-down {
+  position: absolute;
+  bottom: -200px;
+  left: 43%;
+  transform: translate(-50%); }
 
 .icon-bar {
   overflow: hidden;
@@ -556,3 +569,85 @@ footer {
     color: #858585; }
   footer i {
     margin-right: 10px; }
+
+@media only screen and (max-width: 560px) {
+  h1.logo {
+    font-size: 30px; }
+
+  .problem aside {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.3333333333%;
+    float: left;
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+    margin: 0; }
+
+  .solution aside {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.3333333333%;
+    float: right;
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+    margin: 0; }
+
+  .problem article {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.6666666667%;
+    float: right;
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+    margin: 0; }
+
+  .solution article {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.6666666667%;
+    float: left;
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+    margin: 0; }
+
+  .problem aside i, .solution aside i {
+    font-size: 150px; }
+
+  .message > div {
+    width: 66.2477558348%;
+    float: left;
+    margin-right: 1.2567324955%; }
+
+  footer {
+    padding: 10px 0;
+    text-align: center; }
+    footer span {
+      display: block;
+      float: none;
+      margin-top: 10px; } }
+@media only screen and (max-width: 450px) {
+  .split {
+    height: auto; }
+    .split > div {
+      clear: both;
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+
+  section {
+    padding: 2em 0; }
+
+  .problem aside, .solution aside {
+    display: none; }
+
+  .problem article, .solution article {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; } }

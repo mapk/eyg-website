@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 { font-weight:300; margin:0 0 10px; line-height:1.2; }
 h1 { font-size:36px; }
 h2 { color:$green; }
 
-h1.logo { color:#1db345; font-weight:300; margin:0; padding:0 0 10px;
+h1.logo { color:#1db345; font-weight:300; margin:0; padding:0 0 10px; white-space:nowrap;
 	img { vertical-align:middle; width:48px; margin-top:-10px; }
 }
 .tagline { color:#858585; margin-bottom:20px; }
@@ -49,11 +49,15 @@ section { padding:5em 0; @include clearfix(); position:relative; }
 }
 
 .problem { @include clearfix();
-	aside { @include span(4); text-align:center; }
+	aside { @include span(4); text-align:center; 
+		i { font-size:200px; text-align:center; }
+	}
 	article { @include span(8 last); }
 }
 .solution { @include clearfix();
-	aside { @include span(4 last); text-align:center; }
+	aside { @include span(4 last); text-align:center; 
+		i { font-size:200px; text-align:center; }
+	}
 	article { @include span(8); }
 }
 .overview { padding:5em 0; height:100%; 
@@ -71,8 +75,10 @@ section { padding:5em 0; @include clearfix(); position:relative; }
 }
 .message > div { @include span(6 inside-static); }
 
-
-
+.arrow-down { position: absolute;
+  bottom:-200px;
+  left: 43%;
+  transform: translate(-50%); }
 
 .icon-bar { overflow:hidden; white-space:nowrap; margin:-4em 0 0;
 	i { font-size:32px; color:$greyLighter; margin:0 15px; }
@@ -156,4 +162,26 @@ footer { padding:20px 0; @include clearfix();
 }
 
 
+// Media Queries
 
+@media only screen and (max-width: 560px) {
+	h1.logo { font-size:30px; }
+	.problem aside { @include span(4 inside-static first); margin:0; }
+	.solution aside { @include span(4 inside-static last); margin:0; }
+	.problem article { @include span(8 inside-static last); margin:0; }
+	.solution article { @include span(8 inside-static first); margin:0; }
+	.problem aside i, .solution aside i { font-size:150px; }
+	.message > div { @include span(8); }
+	footer { padding:10px 0; text-align:center;
+		span { display:block; float:none; margin-top:10px; }
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.split { height:auto; 
+		> div { @include full; }
+	}
+	section { padding:2em 0; }
+	.problem aside, .solution aside { display:none; }
+	.problem article, .solution article { @include full; }
+}
