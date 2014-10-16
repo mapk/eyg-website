@@ -222,6 +222,9 @@ body {
   line-height: 1.45;
   font-size: 16px; }
 
+#skrollr-body {
+  height: auto !important; }
+
 .topbar {
   background: #29b24c;
   height: 5px;
@@ -283,29 +286,26 @@ section {
 .container {
   max-width: 55.7em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  display: block; }
   .container:after {
     content: " ";
     display: block;
     clear: both; }
 
-.split {
+.split > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 0.35em;
+  padding-right: 0.35em;
+  position: relative;
   height: 100%; }
-  .split > div {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-    padding-left: 0.35em;
-    padding-right: 0.35em;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
-    .split > div:first-child {
-      text-align: center; }
+  .split > div:first-child {
+    text-align: center;
+    padding-top: 30%; }
 
 .problem {
   *zoom: 1; }
@@ -376,7 +376,7 @@ section {
 
 .arrow-down {
   position: absolute;
-  bottom: -200px;
+  bottom: 20px;
   left: 43%;
   transform: translate(-50%); }
 
@@ -682,6 +682,9 @@ footer {
       display: none; }
     .overview > div .btn {
       display: none; }
+
+  .arrow-down {
+    display: none; }
 
   .icon-bar {
     margin-top: -1em; } }

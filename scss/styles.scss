@@ -12,6 +12,8 @@ $susy: layout( 12 (4em .7em) after);
 html, body { width:100%; height:100% !important; margin:0; padding:0; }
 body { font-family: 'Lato', sans-serif; font-weight:300; color:$greyDark; line-height:$baseLineHeight; font-size:$baseFontSize; }
 
+#skrollr-body { height:auto !important; }
+
 .topbar { background:$green; height:5px; width:100%; position:relative; z-index:10; }
 
 img.scale-with-grid { max-width:100%; height:auto; }
@@ -32,9 +34,9 @@ a:hover { color:lighten($green,10%); }
 
 
 section { padding:5em 0; @include clearfix(); position:relative; }
-.container { @include container; }
+.container { @include container; display:block; }
 
-.split { height:100%;
+.split { //height:100%;
     // display: -webkit-box;
     // display: -moz-box;
     // display: -ms-flexbox;
@@ -43,12 +45,12 @@ section { padding:5em 0; @include clearfix(); position:relative; }
     // align-items: center;
     // justify-content: center;
 	
-	> div { @include span(6 inside-static); position:relative; //height:100%;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-		&:first-child { text-align:center; }
+	> div { @include span(6 inside-static); position:relative; height:100%;
+    // top: 50%;
+    // -webkit-transform: translateY(-50%);
+    // -ms-transform: translateY(-50%);
+    // transform: translateY(-50%);
+		&:first-child { text-align:center; padding-top:30%; }
 	}
 }
 
@@ -80,7 +82,7 @@ section { padding:5em 0; @include clearfix(); position:relative; }
 .message > div { @include span(6 inside-static); }
 
 .arrow-down { position: absolute;
-  bottom:-200px;
+  bottom:20px;
   left: 43%;
   transform: translate(-50%); }
 
@@ -202,6 +204,6 @@ footer { padding:20px 0; @include clearfix();
 			.btn { display:none; }
 		}
 	}
-
+	.arrow-down { display:none; }
 	.icon-bar { margin-top:-1em; }
 }
