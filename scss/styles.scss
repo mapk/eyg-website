@@ -46,14 +46,13 @@ section { padding:5em 0; @include clearfix(); position:relative; }
     // align-items: center;
     // justify-content: center;
 	
-	> div { @include span(6 inside-static); position:relative; height:100%;
-    // top: 50%;
-    // -webkit-transform: translateY(-50%);
-    // -ms-transform: translateY(-50%);
-    // transform: translateY(-50%);
-		&:first-child { text-align:center; padding-top:30%; }
+	> div { @include span(6 inside-static); @include vertical-align;
+		&:first-child { text-align:center; }
 	}
 }
+
+.arrow-down { display:block; margin:50px auto 0; }
+
 
 .problem { @include clearfix();
 	aside { @include span(4); text-align:center; 
@@ -81,11 +80,6 @@ section { padding:5em 0; @include clearfix(); position:relative; }
 	}
 }
 .message > div { @include span(6 inside-static); }
-
-.arrow-down { position: absolute;
-  bottom:20px;
-  left: 43%;
-  transform: translate(-50%); }
 
 .icon-bar { overflow:hidden; white-space:nowrap; margin:-4em 0 0;
 	i { font-size:32px; color:$greyLighter; margin:0 15px; }

@@ -302,10 +302,16 @@ section {
   padding-left: 0.35em;
   padding-right: 0.35em;
   position: relative;
-  height: 100%; }
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
   .split > div:first-child {
-    text-align: center;
-    padding-top: 30%; }
+    text-align: center; }
+
+.arrow-down {
+  display: block;
+  margin: 50px auto 0; }
 
 .problem {
   *zoom: 1; }
@@ -373,12 +379,6 @@ section {
   float: left;
   padding-left: 0.35em;
   padding-right: 0.35em; }
-
-.arrow-down {
-  position: absolute;
-  bottom: 20px;
-  left: 43%;
-  transform: translate(-50%); }
 
 .icon-bar {
   overflow: hidden;
