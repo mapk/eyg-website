@@ -34,16 +34,20 @@ a:hover { color:lighten($green,10%); }
 section { padding:5em 0; @include clearfix(); position:relative; }
 .container { @include container; }
 
-.split { height: 100%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.split { height:100%;
+    // display: -webkit-box;
+    // display: -moz-box;
+    // display: -ms-flexbox;
+    // display: -webkit-flex;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
 	
-	> div { @include span(6 inside-static); position:relative; 
+	> div { @include span(6 inside-static); position:relative; //height:100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 		&:first-child { text-align:center; }
 	}
 }
@@ -61,16 +65,16 @@ section { padding:5em 0; @include clearfix(); position:relative; }
 	article { @include span(8); }
 }
 .overview { padding:5em 0; height:100%; 
-	display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	// display: -webkit-box;
+ //    display: -moz-box;
+ //    display: -ms-flexbox;
+ //    display: -webkit-flex;
+ //    display: flex;
+ //    align-items: center;
+ //    justify-content: center;
 	
-	> div { @include span(4 inside-static);
-		&:nth-child(2) { text-align:center; }
+	> div { @include span(4 inside-static); padding-top:4em;
+		&:nth-child(2) { text-align:center; padding-top:0; }
 	}
 }
 .message > div { @include span(6 inside-static); }
@@ -119,11 +123,11 @@ section { padding:5em 0; @include clearfix(); position:relative; }
 	.tip-4-screen { background:url(../images/tip4.gif) no-repeat; }
 	[class^='tip'] { margin:56px auto 0; width:180px; height:325px; background-size:100%; }
 }
-[class^='tip'] { margin-bottom:2em; position:relative; top:0; text-align:center; }
+[class^='tip'] { margin-bottom:2em; position:relative; top:0; left:-1px; text-align:center; }
 
 
 #slide-5 { padding-bottom:0;
-	.bg { background:url(../images/photofood.jpg); padding:5em 0; box-sizing:border-box;
+	.bg { background:url(../images/photofood.jpg); padding:5em 0; box-sizing:border-box; @include clearfix();
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -178,10 +182,26 @@ footer { padding:20px 0; @include clearfix();
 }
 
 @media only screen and (max-width: 450px) {
-	.split { height:auto; 
-		> div { @include full; }
+	.split { height:auto !important; 
+		> div { @include full; height:auto; display:block; top:0;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+			&:first-child { padding-top:10%; margin-bottom:40px; }
+		}
+		.hero-blur { display:none; }
 	}
 	section { padding:2em 0; }
 	.problem aside, .solution aside { display:none; }
 	.problem article, .solution article { @include full; }
+	.message > div { @include full; }
+
+	.overview { 
+		> div { @include full; padding:0; margin:0 auto;
+			&:nth-child(2) { display:none; }
+			.btn { display:none; }
+		}
+	}
+
+	.icon-bar { margin-top:-1em; }
 }

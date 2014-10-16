@@ -290,14 +290,7 @@ section {
     clear: both; }
 
 .split {
-  height: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  height: 100%; }
   .split > div {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -306,7 +299,11 @@ section {
     float: left;
     padding-left: 0.35em;
     padding-right: 0.35em;
-    position: relative; }
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
     .split > div:first-child {
       text-align: center; }
 
@@ -354,14 +351,7 @@ section {
 
 .overview {
   padding: 5em 0;
-  height: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  height: 100%; }
   .overview > div {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -369,9 +359,11 @@ section {
     width: 33.3333333333%;
     float: left;
     padding-left: 0.35em;
-    padding-right: 0.35em; }
+    padding-right: 0.35em;
+    padding-top: 4em; }
     .overview > div:nth-child(2) {
-      text-align: center; }
+      text-align: center;
+      padding-top: 0; }
 
 .message > div {
   -webkit-box-sizing: border-box;
@@ -483,6 +475,7 @@ section {
   margin-bottom: 2em;
   position: relative;
   top: 0;
+  left: -1px;
   text-align: center; }
 
 #slide-5 {
@@ -491,12 +484,19 @@ section {
     background: url(../images/photofood.jpg);
     padding: 5em 0;
     box-sizing: border-box;
+    *zoom: 1;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 100%;
     width: 100%; }
+    #slide-5 .bg:before, #slide-5 .bg:after {
+      display: table;
+      content: "";
+      line-height: 0; }
+    #slide-5 .bg:after {
+      clear: both; }
     #slide-5 .bg h1, #slide-5 .bg h2, #slide-5 .bg p {
       background: rgba(255, 255, 255, 0.75);
       color: #333333;
@@ -631,13 +631,24 @@ footer {
       margin-top: 10px; } }
 @media only screen and (max-width: 450px) {
   .split {
-    height: auto; }
+    height: auto !important; }
     .split > div {
       clear: both;
       width: 100%;
       float: left;
       margin-left: 0;
-      margin-right: 0; }
+      margin-right: 0;
+      height: auto;
+      display: block;
+      top: 0;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0); }
+      .split > div:first-child {
+        padding-top: 10%;
+        margin-bottom: 40px; }
+    .split .hero-blur {
+      display: none; }
 
   section {
     padding: 2em 0; }
@@ -650,4 +661,27 @@ footer {
     width: 100%;
     float: left;
     margin-left: 0;
-    margin-right: 0; } }
+    margin-right: 0; }
+
+  .message > div {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+
+  .overview > div {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    margin: 0 auto; }
+    .overview > div:nth-child(2) {
+      display: none; }
+    .overview > div .btn {
+      display: none; }
+
+  .icon-bar {
+    margin-top: -1em; } }

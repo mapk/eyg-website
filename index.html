@@ -33,6 +33,7 @@
 
 </head>
 <body>
+<div id="skrollr-body">
 	<div class="topbar"></div>
 	<div class="fullSlide split container" id="slide-1">
 		<div>
@@ -59,7 +60,7 @@
 		</div>
 		<div>
 			<img src="images/hero-white.png" class="scale-with-grid" />
-			<img src="images/hero-camera-blur.jpg" style="position:absolute; top:0; left:300px; z-index:-1;" class="scale-with-grid" 
+			<img src="images/hero-camera-blur.jpg" style="position:absolute; top:0; left:300px; z-index:-1;" class="scale-with-grid hero-blur" 
 			data-center="top:1em;"
         	data-top-bottom="top:-20em;"
         	data-bottom-top="top:20em;"
@@ -208,17 +209,20 @@
 			<span>Copyright 2014. All Rights Reserved. Eat Your Greens is a product of <a href="http://changeranger.co" target="_blank">Change Ranger</a>.</span>
 		</div>
 	</footer>
-	
+</div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="js/imagesloaded.js"></script>
 <script src="js/skrollr.js"></script>
-<script src="js/wow.js"></script>
 <script src="js/_main.js"></script>
+<script src="js/wow.js"></script>
 <script src="js/accordion.js"></script>
 
 <script>
 	new WOW().init();
+
+	// $('.split').attr('height',$(window).height());
+	// $('.bg').css('height',$(window).height());
 </script>
 
 <script type="text/javascript">
