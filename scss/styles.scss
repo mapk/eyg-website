@@ -9,10 +9,11 @@ $susy: layout( 12 (4em .7em) after);
 
 
 // Absolute positioning the footer on the bottom
-html, body { width:100%; height:100% !important; margin:0; padding:0; }
+html, body { width:100%; height:auto !important; margin:0; padding:0; }
 body { font-family: 'Lato', sans-serif; font-weight:300; color:$greyDark; line-height:$baseLineHeight; font-size:$baseFontSize; }
 
 #skrollr-body { height:auto !important; }
+.fullSlide {  }
 
 .topbar { background:$green; height:5px; width:100%; position:relative; z-index:10; }
 
@@ -129,12 +130,12 @@ section { padding:5em 0; @include clearfix(); position:relative; }
 
 
 #slide-5 { padding-bottom:0;
-	.bg { background:url(../images/photofood.jpg); padding:5em 0; box-sizing:border-box; @include clearfix();
+	.bg { background:url(../images/photofood.jpg); padding:5em 0; @include box-sizing(border-box); @include clearfix();
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
-		height: 100%;
+		// height: 100%;
 		width: 100%; 
 	
 		h1, h2, p { background:rgba(255,255,255,.75); color:$greyDarker; padding:15px; display:inline-table; position:relative; }
@@ -193,12 +194,15 @@ footer { padding:20px 0; @include clearfix();
 		}
 		.hero-blur { display:none; }
 	}
-	section { padding:2em 0; }
+	section { padding:1em 0; }
 	.problem aside, .solution aside { display:none; }
 	.problem article, .solution article { @include full; }
-	.message > div { @include full; }
+	.message > div { @include full; 
+		h1, h2 { visibility:visible !important; }
+		a { margin:0 auto; display:block; }
+	}
 
-	.overview { 
+	.overview { padding:1em 0;
 		> div { @include full; padding:0; margin:0 auto;
 			&:nth-child(2) { display:none; }
 			.btn { display:none; }
@@ -206,4 +210,9 @@ footer { padding:20px 0; @include clearfix();
 	}
 	.arrow-down { display:none; }
 	.icon-bar { margin-top:-1em; }
+	#slide-5 {
+		.bg { padding:1em 0; background:$greyLighter; }
+	}
+
+	[class^='tip'] { visibility:visible !important; }
 }
