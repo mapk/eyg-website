@@ -191,6 +191,33 @@
 	</section> -->
 
 
+	<section class="chunk-white" style="min-height:280px; max-height:280px; overflow:hidden;">
+		<div class="container">
+			<div class="quotes">
+				<blockquote>
+				<p>"Finally a realistic approach to food journaling in the 21st century!"</p>
+				<p>- Jeff Pelton</p>
+				</blockquote>
+
+				<blockquote>
+				<p>"Counting calories is old news. Eat Your Greens is improving upon the standard and making nutrition education fun and easy, leading to better health."</p>
+				<p>- Diana Young, Registered Dietitian</p>
+				</blockquote>
+
+				<blockquote>
+				<p>"Colour coded eating, much easier than counting all of the kilojoules."</p>
+				<p>- Mark Kochergen</p>
+				</blockquote>
+
+				<blockquote>
+				<p>"Well this app lets you take a picture of your food, then will tell you where you are lacking in the rainbow, and make suggestions of foods to eat. Awesome!!"</p>
+				<p>- Nicole Volkoff</p>
+				</blockquote>
+			</div>
+		</div>
+	</section>
+
+
 	<section>
 		<!-- Begin MailChimp Signup Form -->
 		<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
@@ -227,7 +254,7 @@
 <script src="js/skrollr.js"></script>
 <script src="js/_main.js"></script>
 <script src="js/wow.js"></script>
-<script src="js/accordion.js"></script>
+<script src="js/jquery.quovolver.min.js"></script>
 
 <script type="text/javascript">
 	new WOW().init();
@@ -267,6 +294,11 @@
 			$(this).closest('.container').find('.wire div').removeClass()
 			$(this).closest('.container').find('.wire div').addClass('tip-4-screen')
 		});
+	});
+
+	$(document).ready(function() {
+		// Call Quovolver on the '.quotes' object
+		$('.quotes').quovolver();
 	});
 </script>
 

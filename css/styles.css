@@ -272,6 +272,9 @@ a, a:visited, a:hover, a:focus {
 a:hover {
   color: #3cd262; }
 
+blockquote {
+  font-style: italic; }
+
 section {
   padding: 5em 0;
   *zoom: 1;
@@ -403,8 +406,10 @@ section {
 
 .chunk-beige {
   background: #f6ebcc;
-  color: #f69522; }
-  .chunk-beige h1, .chunk-beige h2, .chunk-beige p, .chunk-beige i {
+  color: #dc7b09; }
+  .chunk-beige h1, .chunk-beige h2, .chunk-beige p {
+    color: #dc7b09; }
+  .chunk-beige i {
     color: #f69522; }
 
 .chunk-orange {
@@ -415,9 +420,9 @@ section {
 
 .chunk-yellow {
   background: #f6e956;
-  color: #FFFFFF; }
+  color: #f69522; }
   .chunk-yellow h1, .chunk-yellow h2, .chunk-yellow p, .chunk-yellow i {
-    color: #FFFFFF; }
+    color: #f69522; }
 
 .chunk-blue {
   background: #2267b2;
@@ -433,9 +438,9 @@ section {
 
 .chunk-white {
   background: #F4F4F4;
-  color: #CECECE; }
+  color: #858585; }
   .chunk-white h1, .chunk-white h2, .chunk-white p, .chunk-white i {
-    color: #CECECE; }
+    color: #858585; }
 
 .broc-box {
   width: 50px;
@@ -513,6 +518,11 @@ section {
         top: 5px;
         color: #FFFFFF; }
 
+.quotes {
+  width: 660px;
+  margin: 0 auto;
+  text-align: center; }
+
 #mc_embed_signup h3 {
   text-align: center;
   margin-bottom: 2em; }
@@ -565,7 +575,7 @@ footer {
   footer:after {
     clear: both; }
   footer span {
-    font-size: 14px;
+    font-size: 12px;
     float: right;
     color: #858585; }
   footer i {
