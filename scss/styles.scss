@@ -145,11 +145,14 @@ section { padding:5em 0; @include clearfix(); position:relative; }
 
 
 // MailChimp email signup CSS
-#mc_embed_signup { max-width:460px; margin:40px 0 0; padding:0; color:#999; }
+//#mc_embed_signup { max-width:460px; margin:40px 0 0; padding:0; color:#999; }
+#mc_embed_signup { 
+	h3 { text-align:center; margin-bottom:2em; }
+}
 #mc_embed_signup label { font-weight:300; }
-#mc_embed_signup .form-pos { width:320px; position:relative; }
+#mc_embed_signup .form-pos { width:400px; position:relative; margin:0 auto; }
 #mc_embed_signup input.email { width:65%; border-radius:2px 0 0 2px; border:none; background:#efefef; margin:0; text-indent:10px; }
-#mc_embed_signup input.button { background:#FFF; border:2px solid #efefef; color:#858585; border-radius:0 2px 2px 0; font-weight:400; font-size:inherit; height:auto; line-height:1.95; position:absolute; top:0; right:0; 
+#mc_embed_signup input.button { background:#FFF; border:2px solid #efefef; color:#858585; border-radius:0 2px 2px 0; font-weight:400; font-size:inherit; height:auto; line-height:1.95; position:absolute; top:0; right:20px; 
 	-webkit-transition:color .1s ease;
 	-moz-transition:color .1s ease;
 	-o-transition:color .1s ease;
@@ -157,7 +160,7 @@ section { padding:5em 0; @include clearfix(); position:relative; }
 }
 #mc_embed_signup input.button:hover { background:#FFF; color:#1db345; }
 
-footer { padding:20px 0; @include clearfix();
+footer { padding:20px 0; @include clearfix(); border-top:1px solid $greyLighter;
 	span { font-size:14px; float:right; color:$greyDark; }
 	i { margin-right:10px; }
 }
