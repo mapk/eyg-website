@@ -315,6 +315,8 @@ section {
 .arrow-down {
   display: block;
   margin: 50px auto 0; }
+  .arrow-down:hover {
+    cursor: pointer; }
 
 .problem {
   *zoom: 1; }

@@ -300,6 +300,16 @@
 		// Call Quovolver on the '.quotes' object
 		$('.quotes').quovolver();
 	});
+
+	$(document).ready(function (){
+        $(".arrow-down").click(function (){
+            //$(this).animate(function(){
+                $('html, body').animate({
+                    scrollTop: $(".chunk-beige").offset().top
+                }, 2000);
+            //});
+        });
+    });
 </script>
 
 <script>
